@@ -6,7 +6,7 @@
         
         <div class="row">
         
-        <div class="col s12 m3">
+        <div class="col s12 m2">
           <a id="brand-logo" href="{{ site.baseurl }}/">
             <img class="responsive-img" src="img/lairworks-logo.png" />
           </a>
@@ -17,7 +17,7 @@
             {% for page in site.pages %}
               {% if page.title %}
                 <li>
-                  <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                  <a class="flow-text" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
                 </li>
               {% endif %}
             {% endfor %}

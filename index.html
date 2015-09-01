@@ -4,16 +4,18 @@ layout: default
 
 <div class="row">
 
-  <h1 class="page-heading">Latest News</h1>
+  <h1 class="flow-text">Latest News</h1>
 
   {% for post in site.posts %}
-    <div class="col s12 m6">
+    <div class="col s12">
       <div class="card">
         <div class="card-content white-text">
            <span class="card-title">
-              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} posted {{ post.date | date: "%b %-d, %Y" }}</a>             
+              <a class="flow-text" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+              <br />
+              {{ post.date | date: "%b %-d, %Y" }}          
            </span>
-           <p>
+           <p class="flow-text">
              {{ post.excerpt }}
            </p>
         </div>
@@ -21,6 +23,8 @@ layout: default
     </div>
   {% endfor %}
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <div class="col s12">
+    <p class="rss-subscribe flow-text">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  </div>
 
 </div>
