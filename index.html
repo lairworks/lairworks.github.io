@@ -8,13 +8,13 @@ layout: default
 
   {% for post in site.posts %}
     <div class="col s12">
-      <div class="card">
-        <div class="card-content white-text">
-           <span class="card-title">
+      <div class="card hoverable">
+        <div class="card-content">
+           <div class="card-title">
               <a class="flow-text" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
               <br />
-              {{ post.date | date: "%b %-d, %Y" }}          
-           </span>
+              <span class="flow-text">{{ post.date | date: "%b %-d, %Y" }}</span>          
+           </div>
            <p class="flow-text">
              {{ post.content | strip_html | truncatewords: 50 }}
            </p>
