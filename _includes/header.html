@@ -2,14 +2,14 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ site.baseurl }}/">
-      <img src="img/lairworks-logo.png" />
+    <a class="brand-logo" href="{{ site.baseurl }}/">
+      <img class="img-responsive center" src="img/lairworks-logo.png" />
     </a>
 
     <nav class="site-nav" role="navigation">
       <div class="nav-wrapper container">
       <div class="trigger">
-        <ul class="right hide-on-med-and-down">
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
         {% for page in site.pages %}
           {% if page.title %}
           <li>
