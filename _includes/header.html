@@ -1,27 +1,27 @@
-<header class="site-header">
-
-  <div class="wrapper">
-
-    <a class="brand-logo" href="{{ site.baseurl }}/">
-      <img class="img-responsive center" src="img/lairworks-logo.png" />
-    </a>
-
-    <nav class="site-nav" role="navigation">
+<header>
+  
+    <nav class="light-blue" role="navigation">
+      
       <div class="nav-wrapper container">
-      <div class="trigger">
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-        {% for page in site.pages %}
-          {% if page.title %}
-          <li>
-          <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          </li>
-          {% endif %}
-        {% endfor %}
-        </ul>
+        
+        <a class="brand-logo col s3" href="{{ site.baseurl }}/">
+          <img class="img-responsive center" src="img/lairworks-logo.png" />
+        </a>
+        
+        <div class="trigger">
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            {% for page in site.pages %}
+              {% if page.title %}
+                <li>
+                  <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        
       </div>
-      </div>
+      
     </nav>
-
-  </div>
 
 </header>
