@@ -2,21 +2,24 @@
 layout: default
 ---
 
-<div class="home">
+<div class="row">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">Latest News</h1>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+  {% for post in site.posts %}
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-content white-text">
+           <span class="card-title">
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} posted {{ post.date | date: "%b %-d, %Y" }}</a>             
+           </span>
+           <p>
+             {{ post.excerpt }}
+           </p>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
