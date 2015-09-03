@@ -8,7 +8,7 @@ permalink: /projects/
   <div class="col s12 m7">
     <div class="card">
       <div class="card-image">
-        <img src="/img/nas2d.png">
+        <img src="/img/logoNAS.png">
         <span class="card-title">NAS2D Framework</span>
       </div>
       <div class="card-content">
